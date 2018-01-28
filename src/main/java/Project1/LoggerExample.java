@@ -1,6 +1,7 @@
 package Project1;
 
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
+
 
 public class LoggerExample {
 
@@ -9,9 +10,7 @@ public class LoggerExample {
     public static void main(String[] args) {
 
         log.info("To jest log o poziomie info");
-
-        log.warning("To jest log o poziomie warning");
-
-
+        log.warn("To jest Log na poziomie warn");
+        log.debug("To jest log o poziomie debug");
     }
 }

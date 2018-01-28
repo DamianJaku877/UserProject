@@ -18,7 +18,9 @@ public class Main {
         boolean islogin1 = userService.login("Damian", "Damian");
         log.info("Zalogowany: " + islogin1);
 
-        userService.changePassword("Damian" , "Jakubowski");
-        log.info("Change password sucess! " + islogin1);
+        boolean changePassword = userService.changePassword("Damian","Damian", "Jaku56dytcbowski");
+        log.info("PasswordChange : Sucess " + changePassword);
+
+
     }
 }

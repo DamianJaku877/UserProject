@@ -8,6 +8,7 @@ public class UserServiceImpl implements UserService {
     List<User> userList = new ArrayList<User>();
 
     public boolean registration(User user) {
+
         userList.add(user);
         return true;
     }
@@ -23,11 +24,15 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
-    public boolean changePassword(String newPassword, String oldPassword) {
+    public boolean changePassword(String login, String oldPassword, String newPassword ) {
         for(int i =0; i < userList.size(); i++){
-            if (oldPassword.equals(userList.get(i).getPassword())){
-                userList.get(i).setPassword(newPassword);
-                return true;
+
+            if(login.equals( userList.get(i).getLogin()) && (oldPassword.equals(userList.get(i).getPassword()))) {
+
+                if (oldPassword.equals(userList.get(i).getPassword())) {
+                    userList.get(i).setPassword(newPassword);
+                    return true;
+                }
             }
         }
         return false;
