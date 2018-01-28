@@ -1,8 +1,24 @@
 package Project1;
 
-public class Main  {
+import java.util.logging.Logger;
 
-    public static void main(String [] args){
+public class Main {
 
+    protected static final Logger log = Logger.getLogger(Main.class.getName());
+
+    public static void main(String[]args){
+
+        UserService userService = new UserServiceImpl();
+
+        User user1 = new User();
+        user1.setLogin("Damian");
+        user1.setPassword("Damian");
+        userService.registration(user1);
+
+        boolean islogin1 = userService.login("Damian", "Damian");
+        log.info("Zalogowany: " + islogin1);
+
+        userService.changePassword("Damian" , "Jakubowski");
+        log.info("Change password sucess! " + islogin1);
     }
 }

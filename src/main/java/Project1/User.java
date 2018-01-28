@@ -1,17 +1,22 @@
 package Project1;
 
 public class User {
-    int id, data, dataur;
-    String name, surname, login, hasło, email;
 
-    public User(int id, int data, int dataur, String name, String surname, String login, String hasło, String email) {
+    int id;
+    double dateOfBirth;
+    String name;
+    String surName;
+    String login;
+    String password;
+    String email;
+
+    public User() {
         this.id = id;
-        this.data = data;
-        this.dataur = dataur;
+        this.dateOfBirth = dateOfBirth;
         this.name = name;
-        this.surname = surname;
+        this.surName = surName;
         this.login = login;
-        this.hasło = hasło;
+        this.password = password;
         this.email = email;
     }
 
@@ -19,60 +24,52 @@ public class User {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getData() {
-        return data;
-    }
-
-    public void setData(int data) {
-        this.data = data;
-    }
-
-    public int getDataur() {
-        return dataur;
-    }
-
-    public void setDataur(int dataur) {
-        this.dataur = dataur;
+    public double getDateOfBirth() {
+        return dateOfBirth;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public String getSurName() {
+        return surName;
     }
 
     public String getLogin() {
         return login;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getHasło() {
-        return hasło;
-    }
-
-    public void setHasło(String hasło) {
-        this.hasło = hasło;
+    public String getPassword() {
+        return password;
     }
 
     public String getEmail() {
         return email;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDateOfBirth(double dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurName(String surName) {
+        this.surName = surName;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setEmail(String email) {
@@ -83,12 +80,11 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", data=" + data +
-                ", dataur=" + dataur +
+                ", dateOfBirth=" + dateOfBirth +
                 ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+                ", surName='" + surName + '\'' +
                 ", login='" + login + '\'' +
-                ", hasło='" + hasło + '\'' +
+                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
