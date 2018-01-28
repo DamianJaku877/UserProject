@@ -1,6 +1,9 @@
 package Project1;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
@@ -9,8 +12,14 @@ public class UserServiceImpl implements UserService {
 
     public boolean registration(User user) {
 
-        userList.add(user);
-        return true;
+        if(LocalDate.now() - 18){
+
+        }
+        for (int i=0; i <userList.size(); i++){
+            if((user.getLogin().equals(userList.get(i).getLogin())) || user.getEmail().equals(userList.get(i).getEmail())){
+                return false;
+            }
+        }
     }
 
     public boolean login(String login, String password) {

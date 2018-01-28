@@ -1,9 +1,11 @@
 package Project1;
 
+import java.time.LocalDate;
+
 public class User {
 
     int id;
-    double dateOfBirth;
+    LocalDate dateOfBirth;
     String name;
     String surName;
     String login;
@@ -24,7 +26,8 @@ public class User {
         return id;
     }
 
-    public double getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
+
         return dateOfBirth;
     }
 
@@ -52,7 +55,7 @@ public class User {
         this.id = id;
     }
 
-    public void setDateOfBirth(double dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
