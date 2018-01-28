@@ -1,5 +1,6 @@
 package Project1;
 
+import java.time.LocalDate;
 import java.util.logging.Logger;
 
 public class Main {
@@ -13,14 +14,14 @@ public class Main {
         User user1 = new User();
         user1.setLogin("Damian");
         user1.setPassword("Damian");
-        user1.setDateOfBirth(1987);
+        user1.setDateOfBirth(21-02-2000)
         userService.registration(user1);
 
         boolean islogin1 = userService.login("Damian", "Damian");
         log.info("Zalogowany: " + islogin1);
 
         boolean changePassword = userService.changePassword("Damian","Damian", "Jaku56dytcbowski");
-        log.info("PasswordChange : Sucess " + changePassword);
+        log.info("PasswordChange :" + changePassword);
 
 
     }
