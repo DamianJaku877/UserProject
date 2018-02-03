@@ -14,7 +14,7 @@ public class Main {
         User user1 = new User();
         user1.setLogin("Damian");
         user1.setPassword("Damian");
-        user1.setDateOfBirth(21-02-2000)
+        user1.setDateOfBirth(21-02-2000);
         userService.registration(user1);
 
         boolean islogin1 = userService.login("Damian", "Damian");

@@ -55,8 +55,8 @@ public class User {
         this.id = id;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setDateOfBirth(int dateOfBirth) {
+        this.dateOfBirth = LocalDate.ofEpochDay(dateOfBirth);
     }
 
     public void setName(String name) {
